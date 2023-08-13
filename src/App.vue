@@ -1,25 +1,28 @@
 <script setup>
-import TeamMember from "./components/TeamMember.vue";
+import ToDo from "./components/ToDo.vue";
+const slogan="Our Task List";
+const mytasks = [
+  { id: 1,title:"task one",done: true},
+  {id: 2,title: "task two",done: true},
+  {id: 3,title: "task three",done: true},
+  {id: 4,title: "task four",done: false},
+  {id: 5,title: "task five",done: false}
 
+]
 </script>
 <template>
-   <section class="mx-auto container">
-        <section class="bg-white dark:bg-gray-900">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
-                    <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
-                </div>
-                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-                 <TeamMember name="Palash" designation="CEO & Full Stack Developer" avatar="//flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" about="This is a wider card with supporting text below as a natural lead-in to additional content."/> 
-                 <TeamMember name="Palash" designation="CEO & Full Stack Developer" avatar="//flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" about="This is a wider card with supporting text below as a natural lead-in to additional content."/> 
-                 <TeamMember name="Palash" designation="CEO & Full Stack Developer" avatar="//flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" about="This is a wider card with supporting text below as a natural lead-in to additional content."/> 
-                 <TeamMember name="Palash" designation="CEO & Full Stack Developer" avatar="//flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" about="This is a wider card with supporting text below as a natural lead-in to additional content."/> 
+ <section class="mx-auto ">
+    <h1 class="my-10 text-center">Components</h1>
+    <div class="flex items-center justify-center h-[600px] font-medium">
+      <div class="flex flex-grow items-center justify-center h-full text-gray-600 bg-gray-100">
+        <!-- Component Start -->
+        <ToDo :slogan="slogan" :tasks="mytasks"/>
+        <!-- Component End  -->
+      </div>
+      
+    </div>
 
-                </div>
-            </div>
-        </section>
-    </section>
+  </section>
 </template>
 
 <style scoped>
