@@ -25,7 +25,7 @@ defineProps({
             </label>
           </div>
          
-        </div>
+    </div>
 </template>
 
 <style scoped>
